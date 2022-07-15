@@ -9,7 +9,7 @@ CFLAGS      ?= -W -Wall -Wextra -fno-builtin-printf -g -Wundef -Wshadow -pedanti
                -Wdouble-promotion -fno-common -Wconversion \
                -march=rv32imc -mabi=ilp32 \
                -Os -ffunction-sections -fdata-sections \
-               -I. -I$(MDK)/$(ARCH) $(EXTRA_CFLAGS)
+               -I. -I$(MDK)/$(ARCH) -I$(HEADERS) $(EXTRA_CFLAGS)
 LINKFLAGS   ?= -T$(MDK)/$(ARCH)/link.ld -nostdlib -nostartfiles -Wl,--gc-sections $(EXTRA_LINKFLAGS)
 CWD         ?= $(realpath $(CURDIR))
 FLASH_ADDR  ?= 0  # 2nd stage bootloader flash offset

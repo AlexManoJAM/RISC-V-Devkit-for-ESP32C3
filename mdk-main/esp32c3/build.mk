@@ -1,3 +1,6 @@
+TOOLCHAIN_PATH:= xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/
+SUBS        := esp32c3-SDK-main/mdk-main/esp32c3/build.mk
+mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 PROG        ?= firmware
 ARCH        ?= esp32c3
 MDK         ?= $(realpath $(dir $(lastword $(MAKEFILE_LIST)))/..)
@@ -10,7 +13,7 @@ CFLAGS      ?= -W -Wall -Wextra -fno-builtin-printf -g -Wundef -Wshadow -pedanti
 LINKFLAGS   ?= -T$(MDK)/$(ARCH)/link.ld -nostdlib -nostartfiles -Wl,--gc-sections $(EXTRA_LINKFLAGS)
 CWD         ?= $(realpath $(CURDIR))
 FLASH_ADDR  ?= 0  # 2nd stage bootloader flash offset
-TOOLCHAIN   ?= ../xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/
+TOOLCHAIN   :=  $(subst $(SUBS),$(TOOLCHAIN_PATH),$(mkfile_path))#../../xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/
 SRCS        ?= $(MDK)/$(ARCH)/boot.c $(MDK)/$(ARCH)/vector.S  $(SOURCES) 
 
 build: $(PROG).bin

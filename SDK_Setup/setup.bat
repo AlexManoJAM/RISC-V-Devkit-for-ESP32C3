@@ -43,9 +43,11 @@ if "%~1"=="-FIXED_CTRL_C" (
 
  IF EXIST RISC-V-Devkit-for-ESP32C3-SDK (
     echo Framework already extracted
+    ren RISC-V-Devkit-for-ESP32C3-SDK esp32c3-SDK-main
     ) else (
         powershell -Command "& {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing 'https://github.com/AlexManoJAM/RISC-V-Devkit-for-ESP32C3/archive/refs/heads/SDK.zip' -OutFile main.zip }" 
         tar -xf main.zip
+        ren RISC-V-Devkit-for-ESP32C3-SDK esp32c3-SDK-main
     )
 
   IF EXIST openocd-esp32 ( 
@@ -54,10 +56,8 @@ if "%~1"=="-FIXED_CTRL_C" (
         powershell -Command "& {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -UseBasicParsing 'https://github.com/AlexManoJAM/RISC-V-Devkit-for-ESP32C3/archive/refs/heads/OpenOCD.zip' -OutFile open.zip }" 
         tar -xf open.zip
         tar -xf RISC-V-Devkit-for-ESP32C3-OpenOCD/openocd-esp32.zip
-        Del RISC-V-Devkit-for-ESP32C3-OpenOCD
-        )
-    
-    
+    )
+    pause
  IF EXIST  main.zip (
     echo deleting Framework zip
     Del main.zip
@@ -76,5 +76,3 @@ Set PATH=%DIRPATH%
 echo 1 >instalation_verification.txt
 pause
 START /WAIT cmd /K msys2_dependencies\batch_1
-
-

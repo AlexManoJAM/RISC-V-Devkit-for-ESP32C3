@@ -11,7 +11,7 @@ LINKFLAGS   ?= -T$(MDK)/$(ARCH)/link.ld -nostdlib -nostartfiles -Wl,--gc-section
 CWD         ?= $(realpath $(CURDIR))
 FLASH_ADDR  ?= 0  # 2nd stage bootloader flash offset
 TOOLCHAIN   ?= ../xpack-riscv-none-embed-gcc-10.2.0-1.2/bin/
-SRCS        ?= $(MDK)/$(ARCH)/boot.c $(MDK)/$(ARCH)/vector.S  $(SOURCES) 
+SRCS        ?= $(MDK)/$(ARCH)/boot.S $(MDK)/$(ARCH)/vector.S  $(SOURCES) 
 
 build: $(PROG).bin
 

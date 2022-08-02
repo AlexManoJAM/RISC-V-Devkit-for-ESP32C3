@@ -17,7 +17,7 @@ This tutorial will guide you through what the extension provides, as well as how
     **4:**`ERS:Flash`
     **5:**`ERS:Run OpenOcd Server`
     
-  - After install the extension you should run `ERS:Donwload and Install` as described in [![Tutorials](https://img.shields.io/badge/-Tutorials-red)](./Documents/Install.md)
+  - After install the extension you should run `ERS:Donwload and Install` as described in [![Tutorials](https://img.shields.io/badge/-Tutorials-red)](./Install.md)
    
   
 

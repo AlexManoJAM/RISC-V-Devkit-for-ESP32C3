@@ -8,7 +8,7 @@
     
  4.  Install the extension.
     
- 5. Use command: `ERS:Donwload and Install` via the **Command Palette (Ctrl+Shift+P)**.
+ 5. Use command: `ERS:Download and Install` via the **Command Palette (Ctrl+Shift+P)**.
 
  6. Click on the Download button.
 

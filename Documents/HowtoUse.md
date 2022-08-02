@@ -29,7 +29,7 @@ This tutorial will guide you through what the extension provides, as well as how
   
   - Run the **`ERS:Build`** command once you have written some code. You **must** perform this command while a source file from the project you wish to build is open in the vscode text editor; this is necessary because the path used by the command to build is retrieved by the currently open text editor. When successfully executed, the binary file (e.g `example.bin\example.elf`), used when flashing the project to the board, should appear in the project folder.
   
-  -  With the project compiled, you can now flash it to the board using **`ERS:Flash`** command. When executed a prompt will appear where you can select the serial port you wish to use:
+  -  With the project compiled, you can now flash it to the board using **`ERS:Flash`** command. When executed, a prompt will appear where you can select the serial port you wish to use:
   
    <img src= "https://user-images.githubusercontent.com/35406517/182386735-0b3d0a13-d109-43a3-8855-9a2fdaaddc16.png" width="400">
   

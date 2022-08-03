@@ -32,6 +32,8 @@ This tutorial will guide you through what the extension provides, as well as how
   -  With the project compiled, you can now flash it to the board using **`ERS:Flash`** command. When executed, a prompt will appear where you can select the serial port you wish to use:
   
    <img src= "https://user-images.githubusercontent.com/35406517/182386735-0b3d0a13-d109-43a3-8855-9a2fdaaddc16.png" width="400">
+   
+   - - The 5th command, **`ERS:Run OpenOcd Server`** is used for debug wich  is explained here: [![Tutorials](https://img.shields.io/badge/-Tutorials-red)](./debug.md)
   
 
  

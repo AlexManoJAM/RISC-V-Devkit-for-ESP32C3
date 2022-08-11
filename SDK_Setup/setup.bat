@@ -3,7 +3,7 @@ rem Bypass "Terminate Batch Job" prompt.
 rem  REM Remove the -FIXED_CTRL_C parameter
    SHIFT
  ) ELSE (
-   Run the batch with <NUL and -FIXED_CTRL_C
+  REM Run the batch with <NUL and -FIXED_CTRL_C
    CALL <NUL %0 -FIXED_CTRL_C %*
    GOTO :EOF
 )

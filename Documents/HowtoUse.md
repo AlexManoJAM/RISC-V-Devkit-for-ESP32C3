@@ -24,7 +24,8 @@ This tutorial will guide you through what the extension provides, as well as how
   <img src="https://user-images.githubusercontent.com/35406517/182379820-1aca852c-3f12-4ba7-8ade-9e94723952ed.png" width="300">
    
   A folder will appear on examples directory with a Makefile and Sources and Include directorys where you can put your **.c\asm** and **.h** files respectively
-  
+  > **NOTE:**  Dont forget to save the generated Makefile, .c\asm and .h files you have created before trying the next command.
+
   <img src="https://user-images.githubusercontent.com/35406517/182382149-03f03abe-5587-4364-9f39-18114cf8c712.png " width="150">
   
   - Run the **`ERS:Build`** command once you have written some code. You **must** perform this command while a source file from the project you wish to build is open in the vscode text editor; this is necessary because the path used by the command to build is retrieved by the currently open text editor. When successfully executed, the generated binary file (e.g `example.bin\example.elf`), used for flashing, should appear in the project folder.

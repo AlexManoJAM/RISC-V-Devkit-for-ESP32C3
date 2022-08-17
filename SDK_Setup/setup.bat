@@ -1,12 +1,12 @@
 rem Bypass "Terminate Batch Job" prompt.
-REM  if "%~1"=="-FIXED_CTRL_C" (
+  if "%~1"=="-FIXED_CTRL_C" (
  REM Remove the -FIXED_CTRL_C parameter
-REM    SHIFT
-REM ) ELSE (
+    SHIFT
+ ) ELSE (
   REM Run the batch with <NUL and -FIXED_CTRL_C
- REM  CALL <NUL %0 -FIXED_CTRL_C %*
- REM   GOTO :EOF
- REM)
+   CALL <NUL %0 -FIXED_CTRL_C %*
+    GOTO :EOF
+ )
 set msy=0
 
   IF EXIST msys2_dependencies\msys2_path.txt ( 

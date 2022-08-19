@@ -26,6 +26,9 @@
 
  - Install **msys2** to provide up-to-date native builds for GCC
   <img src="https://user-images.githubusercontent.com/35406517/182353294-034fccc6-5bcb-446c-b177-7f94db6a81f2.png" width="300">
+  
+  
+  > **NOTE:**  When installing msys2 you must install it on a directory called **msys64**.
 
  - Download xpack-riscv-none-embed-gcc toolchain wich include both compiler and debuger (gcc and gdb) .
  

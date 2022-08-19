@@ -21,12 +21,15 @@ This tutorial will guide you through what the extension provides, as well as how
   
   -  Now you can create a new project! For instance, you can use the **`ERS:Create new project`** command. A prompt will appear where you can introduce the project name.
   
-  <img src="https://user-images.githubusercontent.com/35406517/182379820-1aca852c-3f12-4ba7-8ade-9e94723952ed.png" width="300">
+  <img src="https://user-images.githubusercontent.com/35406517/182379820-1aca852c-3f12-4ba7-8ade-9e94723952ed.png" width="400">
+  - Once the project name is introduced a new prompt will appear where the user can select the type of the project, that being an assembly or a C project.
+ <img src ="https://user-images.githubusercontent.com/35406517/185635248-cfdac0dd-abf7-46fa-bd4b-a19eb68d0601.png" width="400">
+
    
   A folder will appear on examples directory with a Makefile and Sources and Include directorys where you can put your **.c\asm** and **.h** files respectively
   > **NOTE:**  Dont forget to save the generated Makefile, .c\asm and .h files you have created before trying the next command.
 
-  <img src="https://user-images.githubusercontent.com/35406517/182382149-03f03abe-5587-4364-9f39-18114cf8c712.png " width="150">
+  <img src="https://user-images.githubusercontent.com/35406517/182382149-03f03abe-5587-4364-9f39-18114cf8c712.png " width="200">
   
   - Run the **`ERS:Build`** command once you have written some code. You **must** perform this command while a source file from the project you wish to build is open in the vscode text editor; this is necessary because the path used by the command to build is retrieved by the currently open text editor. When successfully executed, the generated binary file (e.g `example.bin\example.elf`), used for flashing, should appear in the project folder.
   

@@ -94,7 +94,7 @@ static inline void wdt_disable(void) {
   REG(C3_RTCCNTL)[43] |= BIT(31);
   REG(C3_RTCCNTL)[45] = 0;
 
-  REG(C3_TIMERGROUP0)[63] &= ~BIT(9);  // TIMG_REGCLK -> disable TIMG_WDT_CLK
+  REG(C3_TIMERGROUP0)[63] &= ~BIT(29);  // Disable TIMG_WDT_CLK_IS_ACTIVE
   REG(C3_TIMERGROUP0)[18] = 0;         // Disable TG0 WDT
   REG(C3_TIMERGROUP1)[18] = 0;         // Disable TG1 WDT
 }
